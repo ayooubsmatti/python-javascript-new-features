@@ -871,17 +871,131 @@
 #         continue # ignore numbre 4
 #     print(c)
 # break
-a = [1, 2, 3, 4, 6, 7, 8]
+# a = [1, 2, 3, 4, 6, 7, 8]
 
-for c in a:
-    if c == 4:
-        break  # ignore numbre 4
-    print(c)
+# for c in a:
+#     if c == 4:
+#         break  # break before numbre 4
+#     print(c)
 
 
-# break
-a = [1, 2, 3, 4, 6, 7, 8]
+# pass
+# a = [1, 2, 3, 4, 6, 7, 8]
 
-for c in a:
-    if c == 4:
-        continue
+# for c in a:
+#     pass
+###################################################
+# /////////Function Packing, Unpacking Arguments *Args
+
+# mylist = [1, 2, 3, 3, 4]
+# print(*mylist)#1 2 3 3 4
+
+# def say_hello(*persones):
+#     for p in persones:
+#         print(f"Hello! {p}")
+
+
+# say_hello("saber", "ayoub", "smatti", "youcef")
+#############################################################
+# /////////Function Packing, Unpacking Arguments default value
+
+# def say_hello(firsname, lastname="unknow"):
+#     print(f"Hello! {firsname} , {lastname} ")
+
+# say_hello("saasa")#Hello! saasa , unknow
+
+#############################################################
+# ///////////////Function Packing, Unpacking Arguments KWArgs
+
+# def say_person(**persones):
+#     for key, value in persones.items():
+#         print(f"{key}: {value}")
+
+
+# say_person(name="saber", lastname="smatti") # name: saber \n lastname: smatti
+
+
+##############################################################
+# mydictionary = {
+#     "name": "saber",
+#     "lastname": "smatti"
+# }
+
+
+# def say_person(**persones):
+#     for key, value in persones.items():
+#         print(f"{key}: {value}")
+
+
+# say_person(**mydictionary)  # name: saber \n lastname: smatti
+
+
+################################################################
+# *Tuple **Dictionary
+
+# def show_skills(name, *skills, **framworks):
+#     print(f"skills {name} ")
+#     for skill in skills:
+#         print(f"-{skill}")
+
+#     print(f"framworks is: ")
+#     for framworkName, framwork in framworks.items():
+#         print(f"-{framworkName} --> {framwork}")
+
+
+# show_skills("skills", "java", "css", "html", framwork="django")
+###################################################################
+# ////////////////////////////////////////////// Function Recursion
+
+
+# def clean_word(word):  # wwoooorld
+#     if len(word) == 1:
+#         return word
+
+#     if word[0] == word[1]:
+#         return clean_word(word[1:])
+
+#     else:
+#         return word[0]+clean_word(word[1:])
+#     return word
+
+
+# print(clean_word("wwoorld")) #world
+
+#####################################################################
+# def print_pyramid(a):
+#     numofestral = 1
+#     estreal = "* "
+#     space = " "
+#     numspace = a-1
+#     while a > 0:
+#         print(numspace * space + numofestral * estreal)
+#         a -= 1
+#         numspace -= 1
+#         numofestral += 1
+
+
+# print_pyramid(8)
+
+#        *
+#       * *
+#      * * *
+#     * * * *
+#    * * * * *
+#   * * * * * *
+#  * * * * * * *
+# * * * * * * * *
+
+###################################################################
+# //////////////////////////////////////////////////Function Lambda
+
+def say_hello(name):
+    return f"Hello {name}"
+
+
+print(say_hello("ayoub"))
+print(say_hello.__name__)
+
+# hello = lambda: name, age : f"Hello {name} {age}"
+
+# print(hello("ayoub",23))
