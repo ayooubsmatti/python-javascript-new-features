@@ -478,11 +478,11 @@
 ###################################################
 # /////////////////////////////////////////////Set
 
-##############not orderd
+# not orderd
 # mySetOne = {"1", "ayoub", 100}
 # print(mySetOne)
 # print(mySetOne[0])#error
-###############not slicing
+# not slicing
 # print(mySetOne[:2])#error
 # immutable
 # mySetOne = {"1", "ayoub", 100,[1,2,3]}#error unhachable with list
@@ -753,10 +753,135 @@
 # print(set(e))  # {'a', 'b'}
 
 # dict
-c = (("a", 1), ("b", 2), ("c", 3))  # tuple
-b = [["one", 1], ["three", 1], ["two", 1]]  # list
-# e = {"a", "b"}  # set
+# c = (("a", 1), ("b", 2), ("c", 3))  # tuple
+# b = [["one", 1], ["three", 1], ["two", 1]]  # list
 
-print(dict(c))  # {'a': 1, 'b': 2, 'c': 3}
-print(dict(b))  # {1, 3, 5, 6}
-# print(dict(e))  # {'a', 'b'}
+# print(dict(c))  # {'a': 1, 'b': 2, 'c': 3}
+# print(dict(b))  # {'one': 1, 'three': 1, 'two': 1}
+
+
+###################################################
+# ////////////////////////////////////// User input
+
+# name = input('what\'is your name: ')
+# lastname = input('what\'is your name: ')
+# name = name.strip().capitalize()
+# lastname = lastname.strip().capitalize()
+
+# print(f"Hello {name} {lastname}")
+# print(f"Hello { lastname:.1s} {name} ")
+
+###################################################
+# ////////////////////////////////////// Email slice
+
+# email = "saberayoubsmatti@gmail.com"
+# print(email[0:email.index("@")])#saberayoubsmatti
+# print(email[(email.index("@")+1):])#gmail.com
+
+###################################################
+# /////////////////////Control Flow - If, Elif, Else
+
+# name = "saber"
+# if name == "saber":
+#     print(True)
+# else:
+#     print(False)
+
+
+# Control Flow - Ternary Conditional Operator
+# age = 18
+# print("you are less than 18 years old" if age <
+#       18 else "you are able to request")
+
+
+###################################################
+# /////////////////////////////Membership Operators
+
+# string
+# name = "ayoub"
+# print("s" in name)
+
+# list
+# friendlist = ["ayoub", "youcef", "saber"]
+# print("ayoub" in friendlist)#True
+# print("ayoub" not in friendlist)#false
+
+
+###################################################
+# /////////////////////////////Loop - While and Else
+
+# a = 0
+# while a < 15:
+#     print(a)
+#     a += 1
+# a = 0
+
+######################################
+# mylist = ["sa", "ss", "sa", "asa"]
+# a = 0
+# while a < len(mylist):
+#     print(mylist[a])
+#     a += 1
+
+###################################################
+# /////////////////////////////Loop - for and Else
+
+# mylist = ["sa", "ss", "sa", "asa"]
+# for a in mylist:
+#     print(a)
+# else:
+#     print("finished")
+# add to list with for
+# a = []
+# for i in range(5):
+#     a.append(input(""))
+# print(a)
+# for with dictionary
+
+# a_dict = {'color': 'blue', 'fruit': 'apple', 'pet': 'dog'}
+# for key in a_dict:
+#     print(key, '->', a_dict[key])
+
+# for with dictionary nested
+# d = {
+#     'dict1':
+#         {'foo': 1, 'bar': 2},
+#     'dict2':
+#         {'baz': 3, 'quux': 4}
+# }
+
+# for keys, values in d.items(): #first method
+#     print(f"{keys}:")
+#     for key, val in values.items():
+#         print(f"-{key} ----> {val}")
+
+
+# for a in d:  # second method
+#     print(a)
+#     for s in d[a]:
+#         print(d[a][s])
+
+###################################################
+# /////////////////////////////Break Continue Pass
+# break
+# a = [1, 2, 3, 4, 6, 7, 8]
+
+# for c in a:
+#     if c == 4:
+#         continue # ignore numbre 4
+#     print(c)
+# break
+a = [1, 2, 3, 4, 6, 7, 8]
+
+for c in a:
+    if c == 4:
+        break  # ignore numbre 4
+    print(c)
+
+
+# break
+a = [1, 2, 3, 4, 6, 7, 8]
+
+for c in a:
+    if c == 4:
+        continue
