@@ -327,20 +327,436 @@
 # integer or float can change to any
 # int() float() complex()
 # /////////////////////////////////Numbers operators
-# addition
-print(10+30)  # 30
-# substraction
-print(10-30)  # -20
-print(10 - - 10)  # 20
-# multiplication
-print(10*30)
-print(5 + 10*5)  # 1005
-# divition
-print(100/5)
-# modulus
-print(8 % 5)  # 3
-# exponent
-print(2**5)  # 2*2*2*2*2 = 32
-# floor devition
-print(100 // 20)  # 5
-print(110//20)  # 5
+# ////addition
+# print(10+30)  # 30
+# ////substraction
+# print(10-30)  # -20
+# print(10 - - 10)  # 20
+# ////multiplication
+# print(10*30)
+# print(5 + 10*5)  # 1005
+# ////divition
+# print(100/5)
+# ////modulus
+# print(8 % 5)  # 3
+# /////exponent
+# print(2**5)  # 2*2*2*2*2 = 32
+# ////floor devition
+# print(100 // 20)  # 5
+# print(110//20)  # 5
+
+
+###################################################
+# /////////////////////////////////////////////lists
+# mutabale (add,delett..)/ have defrents type data
+# mylist = ["one", "two", "one", 1, 100.5, True]
+
+# print(mylist)
+# print(mylist[1])  # full liste
+# print(mylist[-1])  # true
+# print(mylist[-3])  # 1
+
+# print(mylist[1:4])  # ['two', 'one', 1]
+# print(mylist[:4])  # ['one', 'two', 'one', 1]
+# print(mylist[1:])  # ['two', 'one', 1, 100.5, True]
+# print(mylist[::1])  # ['two', 'one', 1, 100.5, True]
+# print(mylist[::2])  # ['one', 'one', 100.5]
+
+# mylist[1] = 2
+# print(mylist)  # ['one', 2, 'one', 1, 100.5, True]
+# mylist[0:2] = []
+# print(mylist)  # ['one', 1, 100.5, True]
+
+# ////////////////////append()
+
+# myfriend = ["ayoub", "oussama", "alla"]
+# myoldfriend = ["saber", "ilyas"]
+# print(myfriend)  # ['ayoub', 'oussama', 'alla']
+# myfriend.append("youcef")
+# print(myfriend)  # ['ayoub', 'oussama', 'alla', 'youcef']
+# myfriend.append(100)
+# print(myfriend)  # ['ayoub', 'oussama', 'alla', 'youcef', 100]
+# myfriend.append(myoldfriend)
+# ['ayoub', 'oussama', 'alla', 'youcef', 100, ['saber', 'ilyas']]
+# print(myfriend)
+# print(myfriend[5][1])  # ilyas
+
+# //////////////////////extend()
+
+# a = [1, 2, 3, 4]
+# b = ["a", "b", "b"]
+# print(a)#[1, 2, 3, 4]
+# a.extend(b)
+# print(a)#[1, 2, 3, 4, 'a', 'b', 'b']
+# //////////////////////remove()
+
+# x = [1, 2, 3, 4, 'a', 'b', 'b']
+# x.remove("b")
+# print(x)# delete just the first b
+# //////////////////////sort()
+# y = [1, 2, 3, 566, 21, 42, 36, 17]
+# y.sort()
+# print(y)  # [1, 2, 3, 17, 21, 36, 42, 566]
+# y.sort(reverse=True)
+# print(y)  # [566, 42, 36, 21, 17, 3, 2, 1]
+
+# //////////////////////reverse()
+# y = [1, 2, 3, 566, 21, 42, 36, 17]
+# y.reverse()
+# print(y)#[17, 36, 42, 21, 566, 3, 2, 1]
+
+# //////////////////////clear()
+# a = [1, 2, 3, 566, 21, 42, 36, 17]
+# a.clear()
+# print(a)
+# //////////////////////copy()
+# a = [1, 2, 3, 566, 21, 42, 36, 17]
+# c = a.copy()
+# print(c)
+
+
+# ///////////////////////count()
+# d = [1, 2, 3, 4, 5, 5, 5, 6, 6, 7, 8]
+# print(d.count(5))  # 3
+# ///////////////////////index()
+# d = [1, 2, 3, 4, 5, 5, 5, 6, 6, 7, 8]
+# print(d.index(5))  # 4
+# ///////////////////////insert()
+# d = [1, 2, 3, 4, 5, 5, 5, 6, 6, 7, 8]
+# d.insert(0, "a")  # insert object befor insert
+# print(d)  # ['a', 1, 2, 3, 4, 5, 5, 5, 6, 6, 7, 8]
+# ///////////////////////pop()
+# d = [1, 2, 3, 4, 5, 5, 5, 6, 6, 7, 8]
+# print(d.pop(6))  #5
+
+###################################################
+# /////////////////////////////////////////////Tuplle
+
+# mytuple = ("as", "dez")
+# mytuple1 = "sa", "54"
+# print(mytuple)
+# print(mytuple1)
+
+# ///////tuple indexing
+
+# mytuple = ("as", "dez")
+# print(mytuple[1])
+
+# ///////////tuple assign values
+
+# mytuple = ("as", "dez")
+# print(mytuple[2]) = "2" #error cannot assign to function call
+
+
+# mytuple = ("as", "dez",2)
+# print(mytuple[1]) #dez
+# print(mytuple[-1]) #2
+
+
+# # //////////////////////////////////////tuple methods
+# #######tuple with one elements
+# mytuple = ("ayoub",)
+# print(type(mytuple))
+# #######tuple concatinations
+# a = (1, 2, 3)
+# b = (4, 5)
+# d = a+b
+# print(d)#(1, 2, 3, 4, 5)
+# #######tuple, list, string repeat(*)
+# a = (1, 2, 3)
+# print(a*6)#(1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3)
+# "##############index
+# a = (1, 2, 3)
+# print(f"the index of 1 is : {a.index(1)}")
+# ##############tuple destruct
+# a = ("a", "b", "c", "f")
+# x, y, _, z = a
+# print(x)#a
+# print(y)#b
+# print(z)#f
+
+###################################################
+# /////////////////////////////////////////////Set
+
+##############not orderd
+# mySetOne = {"1", "ayoub", 100}
+# print(mySetOne)
+# print(mySetOne[0])#error
+###############not slicing
+# print(mySetOne[:2])#error
+# immutable
+# mySetOne = {"1", "ayoub", 100,[1,2,3]}#error unhachable with list
+# mySetOne = {"1", "ayoub", 100, (1, 2, 3)}
+# print(mySetOne)#{'ayoub', (1, 2, 3), 100, '1'}
+
+# item must be unique
+
+# myset = {1, 2, 3, 2, 3, 5, 4}
+# print(myset)  # {1, 2, 3, 4, 5}
+# ####################clear()
+# myset = {1, 2, 3, 2, 3, 5, 4}
+# myset.clear()
+# #####################"union()
+
+# myset = {1, 2, 3, 2, 3, 5, 4}
+# myset1 = {1, 2, 3, 4}
+# print(myset | myset1)#{1, 2, 3, 4, 5}
+# print(myset.union(myset1))#{1, 2, 3, 4, 5}
+# #####################"add()
+
+# myset = {1, 2, 3, 2, 3, 5, 4}
+# myset.add(10)
+# print(myset)  # {1, 2, 3, 4, 5, 10}
+# #####################"copy()
+
+# myset = {1, 2, 3, 4, 5}
+# myset1 = myset.copy()
+# print(myset1)  # {1, 2, 3, 4, 5}
+# #####################"remove()
+
+# myset = {1, 2, 3, 4, 5}
+# myset.remove(3)
+# print(myset)  # { 2, 3, 4, 5}
+# #####################"discart()
+# the same with remove else dosent show the error
+# myset = {1, 2, 3, 4, 5}
+# myset.discard(7)
+# print(myset)  # {1, 2, 3, 4, 5}
+# ##########################"pop()
+# myset = {1, 2, 3, 4, 5}
+# print(myset.pop())  # random elements
+# ##########################"update()
+# myset = {1, 2, 3, 4, 5}
+# myset1 = {1, 2, "a", "b"}
+# myset.update(myset1)
+# print(myset)  # {1, 2, 3, 4, 5, 'a', 'b'}
+# ##########################"defference()
+# myset = {1, 2, 3, 4, 5}
+# myset1 = {1, 2, "a", "b"}
+# print(myset)  # {1, 2, 3, 4, 5}
+# print(myset.difference(myset1))  # myset-myset1
+# myset.difference_update(myset1)
+# print(myset)#{3, 4, 5}
+
+# ##########################"intersection()
+# myset = {1, 2, 3, 4, 5}
+# myset1 = {1, 2, "a", "b"}
+# print(myset)  # {1, 2, 3, 4, 5}
+# print(myset.intersection(myset1))  # {1, 2}
+# myset.intersection_update(myset1)
+# print(myset)  # {1, 2}
+# ##########################"symetrique defrent()
+# myset = {1, 2, 3, 4, 5}
+# myset1 = {1, 2, "a", "b"}
+# print(myset)  # {1, 2, 3, 4, 5}
+# print(myset.symmetric_difference(myset1))  # {3, 'b', 4, 5, 'a'}
+# myset.symmetric_difference_update(myset1)
+# print(myset)  # {3, 'b', 4, 5, 'a'}
+# # ##########################"issubset()
+# myset = {1, 2, 3, 4, 5}
+# myset1 = {1, 2, "a", "b"}
+# print(myset)  # {1, 2, 3, 4, 5}
+# print(myset.issubset(myset1))  # false
+
+# # ##########################"issuerset()
+# myset = {1, 2, 3, 4, 5}
+# myset1 = {1, 2}
+# print(myset)  # {1, 2, 3, 4, 5}
+# print(myset.issuperset(myset1))  # True
+# # ##########################"isjoint()
+# myset = {1, 2, 3, 4, 5}
+# myset1 = {1, 2}
+# print(myset)  # {1, 2, 3, 4, 5}
+# print(myset.isdisjoint(myset1))  # false
+
+
+###################################################
+# ///////////////////////////////////////Dictionary
+# key: value
+# user = {
+#     "name": "ayoub",
+#     "age": 25,
+#     "country": "algeria",
+# }
+# print(user['name'])#ayoub
+# print(user.get('name'))#ayoub
+# print(user.keys())#dict_keys(['name', 'age', 'country'])
+# print(user.values())#dict_values(['ayoub', 25, 'algeria'])
+# two dimensional dictionary
+# user = {
+
+#     "one": {
+#         "name": "ayoub",
+#         "age": 25,
+#         "country": "algeria",
+#     },
+
+#     "two": {
+#         "name": "ali",
+#         "age": 25,
+#         "country": "france",
+#     }
+# }
+# # {'one': {'name': 'ayoub', 'age': 25, 'country': 'algeria'}, 'two': {'name': 'ali', 'age': 25, 'country': 'france'}}
+# print(user)
+# print(user['one']['name'])#ayoub
+
+# two dimensional dictionary
+# user = {
+
+#     "one": {
+#         "name": "ayoub",
+#         "age": 25,
+#         "country": "algeria",
+#     }
+# }
+# # {'one': {'name': 'ayoub', 'age': 25, 'country': 'algeria'}, 'two': {'name': 'ali', 'age': 25, 'country': 'france'}}
+# print(user)#{'one': {'name': 'ayoub', 'age': 25, 'country': 'algeria'}}
+# print(user.clear())#None
+
+# update
+# user = {
+
+#     "one": {
+#         "name": "ayoub",
+#         "age": 25,
+#         "country": "algeria",
+#     }
+# }
+# # {'one': {'name': 'ayoub', 'age': 25, 'country': 'algeria'}, 'two': {'name': 'ali', 'age': 25, 'country': 'france'}}
+# print(user)  # {'one': {'name': 'ayoub', 'age': 25, 'country': 'algeria'}}
+# user.update({"ranking": 52})
+# print(user)
+# setdefault()
+# user = {
+#     "name": "ayoub",
+#     "age": 25,
+#     "country": "algeria",
+# }
+
+# # {'one': {'name': 'ayoub', 'age': 25, 'country': 'algeria'}, 'two': {'name': 'ali', 'age': 25, 'country': 'france'}}
+# print(user)  # {'one': {'name': 'ayoub', 'age': 25, 'country': 'algeria'}}
+# user.setdefault("name", "oussama")
+# print(user)
+# ###########################popitem()
+# user = {
+#     "name": "ayoub",
+#     "age": 25,
+#     "country": "algeria",
+# }
+
+# # {'one': {'name': 'ayoub', 'age': 25, 'country': 'algeria'}, 'two': {'name': 'ali', 'age': 25, 'country': 'france'}}
+# print(user)  # {'one': {'name': 'ayoub', 'age': 25, 'country': 'algeria'}}
+# user.update({"ranking": "52"})
+# print(user.popitem())# returne the last update item
+# items()
+# user = {
+#     "name": "ayoub",
+#     "age": 25,
+#     "country": "algeria",
+# }
+
+# alliTems = user.items()
+# print(user)#{'name': 'ayoub', 'age': 25, 'country': 'algeria'}
+# user["age"] = 36
+# print(alliTems)#dict_items([('name', 'ayoub'), ('age', 36), ('country', 'algeria')])
+# fromkeys()
+# a = ('dzad', 'dazda', 'ssfgr')
+# b = "a"
+
+# print(dict.fromkeys(a, b))#{'dzad': 'a', 'dazda': 'a', 'ssfgr': 'a'}
+
+
+###################################################
+# //////////////////////////////////////////Boolean
+# True False
+
+# # True value
+# print(bool("ayoub"))
+# print(bool(123))
+# # False value
+# print(bool(0))
+# print(bool(''))
+# print(bool(""))
+# print(bool([]))
+# print(bool({}))
+# print(bool(False))
+# ################# Boolean operator
+
+# age = 26
+# country = "algeria"
+# # print(country == "france")  # false
+# # print(age > 20 and country == "algeria")  # true
+# # print(age > 30 or country == "algeria")  # true
+# print(age > 30)  # not true = false
+# print(not age > 30)  # not false = true
+
+###################################################
+# /////////////////////////////Assignment Operators
+
+# x = 11
+# y = 20
+# z = x + y
+# z = z + y  # z += y
+# z = z - y # z -= y
+# x //= 11
+# x %= 11
+# x /= 11
+# x **= 2
+###################################################
+# /////////////////////////////Comparison Operators
+#
+# print(100 == 100)  # true
+# print(100 == 100)  # true
+# print(100 == 100.00)  # true
+# print(100 != 100.00)  # false
+# print(100 > 100)  # false
+# print(100 < 100)  # false
+# print(100 >= 100)  # true
+# print(100 <= 100)  # true
+###################################################
+# /////////////////////////////type conversation
+
+# str
+# a = 10
+# print(type(a))
+# print(type(str(a)))
+# tuple
+# a = "sdasasa"  # string
+# b = [1, 2, 3, 5]  # list
+# c = {1, 5, 3, 6, 5}  # set
+# e = {"a": 1, "b": 2}  # dictionary
+# print(tuple(a))#('s', 'd', 'a', 's', 'a', 's', 'a')
+# print(tuple(b))#(1, 2, 3, 5)
+# print(tuple(c))#(1, 3, 5, 6)
+# print(tuple(e))#('a', 'b')
+
+# list
+# a = "sdasasa"  # string
+# b = [1, 2, 3, 5]  # list
+# c = {1, 5, 3, 6, 5}  # set
+# e = {"a": 1, "b": 2}  # dictionary
+
+# print(list(a))  # ['s', 'd', 'a', 's', 'a', 's', 'a']
+# print(list(b))  # [1, 2, 3, 5]
+# print(list(c))  # [1, 3, 5, 6]
+# print(list(e))  # ['a', 'b']
+# ###############################set
+# a = "sdasasa"  # string
+# b = [1, 2, 3, 5]  # list
+# c = [1, 5, 3, 6, 5]  # list
+# e = {"a": 1, "b": 2}  # dictionary
+
+# print(set(a))  # {'a', 's', 'd'}
+# print(set(b))  # {1, 2, 3, 5}
+# print(set(c))  # {1, 3, 5, 6}
+# print(set(e))  # {'a', 'b'}
+
+# dict
+c = (("a", 1), ("b", 2), ("c", 3))  # tuple
+b = [["one", 1], ["three", 1], ["two", 1]]  # list
+# e = {"a", "b"}  # set
+
+print(dict(c))  # {'a': 1, 'b': 2, 'c': 3}
+print(dict(b))  # {1, 3, 5, 6}
+# print(dict(e))  # {'a', 'b'}
