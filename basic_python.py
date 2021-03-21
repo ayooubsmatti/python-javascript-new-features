@@ -1243,7 +1243,52 @@
 ##########################################################################
 # revers()
 
-name = "ayoub"
-# print(reversed(name))
-for letter in reversed(name):
-    print(letter)
+# name = "ayoub"
+# # print(reversed(name))
+# for letter in reversed(name):
+#     print(letter)
+
+##########################################################################
+###################################################          date and time
+import datetime
+# print(dir(datetime))
+# print(dir(datetime.datetime))
+
+# print(datetime.datetime.now())
+# print(datetime.datetime.now().year)
+# print(datetime.datetime.now().month)
+# print(datetime.datetime.now().day)
+# sec = datetime.datetime.now().second
+# print(f"{sec}")
+
+
+# # print current time HOUR
+# print(datetime.datetime.now().time().hour)
+# # print current time minute
+# print(datetime.datetime.now().time().minute)
+# # print current time second
+# print(datetime.datetime.now().time().second)
+
+
+# # print start end of time
+# print(datetime.time.min)#00:00:00
+# print(datetime.time.max)#23:59:59.999999
+
+
+# # print a specific date
+# print(datetime.datetime(2015, 2, 14))
+
+
+# find my age
+# myBirthDay = datetime.datetime()
+# dateNow = datetime.datetime.now()
+
+# print(f"your age is: {(dateNow - myBirthDay).days}")
+
+##############################################
+# format date
+# https://strftime.org
+
+import datetime
+myBirthDay = datetime.datetime(1996, 2, 14)
+print(myBirthDay.strftime("%A %b %d %y"))
