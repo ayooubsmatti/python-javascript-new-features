@@ -989,13 +989,82 @@
 ###################################################################
 # //////////////////////////////////////////////////Function Lambda
 
-def say_hello(name):
-    return f"Hello {name}"
+# def say_hello(name):
+#     return f"Hello {name}"
 
 
-print(say_hello("ayoub"))
-print(say_hello.__name__)
+# print(say_hello("ayoub"))
+# print(say_hello.__name__)
 
 # hello = lambda: name, age : f"Hello {name} {age}"
 
 # print(hello("ayoub",23))
+
+###################################################################
+# ///////////////////////////////////////////////////Files Handling
+# import os
+# # Main Current working directory
+# print(os.getcwd())
+# # Directory for the opened file
+# print(os.path.dirname(os.path.abspath(__file__)))
+# # change current working directory
+# os.chdir(os.path.dirname(os.path.abspath(__file__)))
+# myfile = open("/home/ayoub/ayoub.txt", "r")
+
+# print(myfile)  # file data object
+# print(myfile.name)  # name
+# print(myfile.mode)  # mode
+# print(myfile.encoding)  # encoding
+
+# print(myfile.read())
+# print(myfile.read(5))
+
+
+# print(myfile.readline(2))
+# print(myfile.readline())
+# print(myfile.readline())
+# print(myfile.readline())
+# print(myfile.readline())
+# print(myfile.readline())
+
+
+# print(myfile.readlines())
+
+
+# for line in myfile:
+#     print(line)
+#     if line.startswith("de"):
+#         break
+
+# best practice close the file after your complete the task
+
+##############################################################
+# ///////////////////////////////////Write and Append In Files
+
+# myfile = open("/home/ayoub/ayoub.txt", "w")
+# myfile.write("hello\n")
+# myfile.write("second\n")
+
+# myfile = open(r"/home/ayoub/ayoub.txt", "w")
+# myfile.write("second \n"*100)
+
+# mylist = ["oasma\n", "ayoub\n", "ouali\n"]
+# myfile = open(r"/home/ayoub/ayoub.txt", "w")
+# myfile.writelines(mylist)
+
+# a save the old lines and complete
+
+
+# mylist = ["oasma\n", "ayoub\n", "ouali\n"]
+# myfile = open(r"/home/ayoub/ayoub.txt", "a")
+# myfile.truncate(5)
+
+
+# mylist = ["oasma\n", "ayoub\n", "ouali\n"]
+# myfile = open(r"/home/ayoub/ayoub.txt", "a")
+# print(myfile.tell())# place of cursure
+
+
+myfile = open(r"/home/ayoub/ayoub.txt", "r")
+myfile.seek(4)
+print(myfile.read())  # read from seek() position
