@@ -1065,6 +1065,185 @@
 # print(myfile.tell())# place of cursure
 
 
-myfile = open(r"/home/ayoub/ayoub.txt", "r")
-myfile.seek(4)
-print(myfile.read())  # read from seek() position
+# myfile = open(r"/home/ayoub/ayoub.txt", "r")
+# myfile.seek(4)
+# print(myfile.read())  # read from seek() position
+
+
+##############################################################
+# ///////////////////////////////////Built In Functions Part 1
+
+
+# x = [1, 2, 3, "", 5, 6]
+
+# if all(x):
+#     print("all elements is ture")
+
+# else:
+#     print("at list one elements is false")
+
+# b = [1, 2, 3, "", 5, 6]
+
+# if any(b):
+#     print("at list one elements is ture")
+
+# else:
+#     print("theres no any true elements")
+
+
+# ########bin return binnary
+# print(bin(100))
+
+# id
+
+# a = 1
+# b = 3
+# print(id(a))
+# print(id(b))
+
+
+# sum(iterable, start)
+# a = [1, 10, 18, 16]
+# print(sum(a))
+# print(sum(a, 40))
+
+# round(iterable, numofdigits)
+# print(round(150.501))
+# print(round(150.555, 2))
+
+# ############## range(startt, end,step)
+# a = [1, 10, 18, 16]
+# print(list(range(0)))
+# print(list(range(10)))
+# print(list(range(10, 20, 2)))
+
+
+# ##########################################print()
+
+# print("sasa", "sasa", sep="#")
+
+# print("firstline", end="\n")#by default
+
+# print("firstline", end=" ")# doesn't return line
+
+
+# ###################################abs()
+#  ###################################pow(base,exp,mod) => Power
+
+# print(pow(2,5))
+# print(pow(2,5,10)) #2*2*2*2*2 %10
+
+#  ###################################min(item,item,or iterator) =>
+
+# print(min(2,5,4,8,2,7,5))#2
+
+
+#  ###################################max(item,item,or iterator) =>
+# print(max(2, 5, 4, 8, 2, 7, 5))  # 8
+# # ################################### slice()
+# a = ["a", "b", "c", "a", "b", "c"]
+# print(a[:5])  #['a', 'b', 'c', 'a', 'b']
+# print(a[slice(0, 5)])  #['a', 'b', 'c', 'a', 'b']
+
+# # ################################### Map()
+
+
+# def formatText(text):
+#     return f"- {text.strip().capitalize()} -"
+
+
+# myTexts = ["oussama ", " ay", "saber   "]
+# myFormatedata = map(formatText, myTexts)
+
+# for name in myFormatedata:
+#     print(name)
+
+
+# use map with lamda functions
+
+
+# myTexts = ["oussama ", " ay", "saber   "]
+
+# for name in list(map(lambda text: f"- {text.strip().capitalize()} -", myTexts)):
+#     print(name)
+
+# //////  Filter
+# #case 1
+# def checkNumber(num):
+#     if num < 10:
+#         return num
+
+
+# myNumbers = [1, 2, 3, 4, 5, 6]
+# myResult = filter(checkNumber, myNumbers)
+
+# for number in myResult:
+
+#     print(number)
+
+# case 2
+
+# def checkNumber(num):
+#     if num == 0:
+#         return True # must be true to return 0 because th filter fun does't return 0
+
+
+# myNumbers = [1, 2, 3, 4, 5, 6, 0, 0, 0]
+# myResult = filter(checkNumber, myNumbers)
+
+# for number in myResult:
+
+#     print(number)
+
+# /////// case 3
+
+
+# myString = ["abs", "abs", "ok", "okt", "sas", ]
+# myResult = filter(lambda name: name.startswith("o"), myString)
+
+# for nam in myResult:
+
+#     print(nam)
+
+
+##################################### #####################################
+# Reduce()
+
+# from functools import reduce
+
+
+# def sumAll(sum1, sum2):
+
+#     return sum1 + sum2
+
+
+# numbers = [1, 2, 3, 4, 6, 8]
+# myResult = reduce(sumAll, numbers)
+# print(myResult)
+
+##################################### #####################################
+# enumerate()
+
+# mySkills = ["html", "css", "javascript", "python"]
+
+# myskillsWithCounter = enumerate(mySkills, 20)
+
+# # print(type(myskillsWithCounter))
+
+# for counter, skill in myskillsWithCounter:
+
+#     print(f"{counter}- {skill}")
+
+##########################################################################
+###########################################################################
+# help()
+# print(help(print))
+
+
+##########################################################################
+# revers()
+
+name = "ayoub"
+# print(reversed(name))
+for letter in reversed(name):
+    print(letter)
