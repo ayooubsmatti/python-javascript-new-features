@@ -1313,13 +1313,132 @@ import datetime
 # generators is a functions with "yield" keywords insted of "return"
 #
 
-def myGenerator():
-    yield 1
-    yield 2
-    yield 3
+# def myGenerator():
+#     yield 1
+#     yield 2
+#     yield 3
 
 
-myGen = myGenerator()
-print(next(myGen))
-print(next(myGen))
-print(next(myGen))
+# myGen = myGenerator()
+# print(next(myGen))
+# print(next(myGen))
+# print(next(myGen))
+##############################################################
+# //////////////////////////////////////////////////Decorators
+# decorator can accept fun as parameter
+
+# def myDecorator(fun):  # Decorator
+
+#     def nestedFunc():  # any name
+
+#         print("before decorator")
+#         fun()  # Exucute your fun
+#         print("after decorator")
+
+#     return nestedFunc
+
+
+# @myDecorator
+# def sayHello():
+#     print("Hello from say hello function")
+
+
+# sayHello()
+
+########################################
+
+
+# def myDecorator(fun):  # Decorator
+
+#     def nestedFunc(n1, n2):  # any name
+
+#         if n1 < 10:
+#             print("beware your number is less than 10")
+#         fun(n1, n2)  # Exucute your fun
+
+#     return nestedFunc
+
+
+# @myDecorator
+# def sayHello(a, b):
+#     print(f"{a} {b}")
+
+
+# sayHello(8, 12)
+
+##################################################
+# speed test practical exemple
+
+# from time import time
+
+
+# def speedTest(func):
+
+#     def wrapper():
+#         start = time()
+#         func()
+#         end = time()
+#         print(f"The running time is: {end - start}")
+#     return wrapper
+
+
+# @speedTest
+# def bigLoop():
+#     for number in range(1, 200):
+#         print(number)
+
+
+# bigLoop()
+##################################################
+# Practical Loop On Many Iterators With Zip
+
+# # take the minimum size iterator
+# list1 = [1, 2, 3, 4, 5]
+# list2 = ["a", "b", "c", "e"]
+# tuple1 = ("Man", "women", "Girls", "Boy")
+# dict1 = {"Name": "ayoub", "age": 25, "country": "algeria"}
+
+# for item1, item2, item3, item4 in zip(list1, list2, tuple1, dict1):
+
+#     print("list 1 Item", item1)
+#     print("list 2 Item", item2)
+#     print("Tuple 1 Item", item3)
+#     print("Dict 1 Item", item4, "Value", dict1[item4])
+
+
+##################################################
+# Practical Image Manipulation With Pillow
+
+# from PIL import Image
+# # Open the image
+# myImage = Image.open(
+#     "/home/ayoub/Desktop/python_javascript_newFeatures/python-blog.jpg")
+
+# # Open the image
+# myImage.show()
+
+# # my cropped image
+# myBox = (0, 0, 400, 400)
+# myNewImage = myImage.crop(myBox)
+
+# # show the new Image
+# myNewImage.show()
+
+# # my converted image mode
+# myConverted = myImage.converted("L")
+# myConverted.show()
+
+########################################################
+# /////////////////Docstring And Commenting vs Documenting
+
+# def ayoub_function(name):
+#     '''This is Function to say Hi '''
+#     print(f"Hi {name}")
+
+
+# print(ayoub_function.__doc__)#'''This is Function to say Hi '''
+# help(ayoub_function)
+
+
+########################################################
+# /////////////////Docstring And Commenting vs Documenting
