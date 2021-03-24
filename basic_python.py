@@ -1289,6 +1289,37 @@ import datetime
 # format date
 # https://strftime.org
 
-import datetime
-myBirthDay = datetime.datetime(1996, 2, 14)
-print(myBirthDay.strftime("%A %b %d %y"))
+# import datetime
+# myBirthDay = datetime.datetime(1996, 2, 14)
+# print(myBirthDay.strftime("%A %b %d %y"))#Wednesday Feb 14 96
+
+
+#################################################
+# iterable vs iterator
+# iterable is the object contains data can be iterate upon
+# exemple: (string, list,set, tuple, dictionary)
+#
+# iterator: thr objects used to iterate over ierable using next() method return 1 elements at the time
+
+# myString = "saber"
+# myIterator = iter(myString)
+# print(next(myIterator))  # s
+# print(next(myIterator))  # a
+# print(next(myIterator))  # b
+
+##############################################################
+# //////////////////////////////////////////////////Generators
+
+# generators is a functions with "yield" keywords insted of "return"
+#
+
+def myGenerator():
+    yield 1
+    yield 2
+    yield 3
+
+
+myGen = myGenerator()
+print(next(myGen))
+print(next(myGen))
+print(next(myGen))
