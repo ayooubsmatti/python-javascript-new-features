@@ -467,28 +467,28 @@
 # --by adding @abdstractmethod Decorator on the methods
 # --ABCMeta class is a Metaclass used for defining abstract base class
 # ---------------------------------------------------
-from abc import ABCMeta, abstractclassmethod
+# from abc import ABCMeta, abstractclassmethod
 
 
-class Programming(metaclass=ABCMeta):
-    @abstractclassmethod
-    def has_oop(self):
-        pass
+# class Programming(metaclass=ABCMeta):
+#     @abstractclassmethod
+#     def has_oop(self):
+#         pass
 
-    def has_name(self):
-        pass
-
-
-class Python(Programming):
-    def has_oop(self):
-        return "Yes"
+#     def has_name(self):
+#         pass
 
 
-class Passcal(Programming):
-    def has_oop(self):
-        return "No "
+# class Python(Programming):
+#     def has_oop(self):
+#         return "Yes"
 
 
-one = Passcal()
-print(one.has_oop())
+# class Passcal(Programming):
+#     def has_oop(self):
+#         return "No "
+
+
+# one = Passcal()
+# print(one.has_oop())
 # ---------------------------------------------------
