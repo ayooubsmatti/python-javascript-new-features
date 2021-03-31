@@ -14,3 +14,7 @@
 # -----------------------------------------------------------------
 # In direct mode python assign  a value "__main__"
 # to the build in variable __name__ in the background
+# ------------------------------------------------------------------
+
+if __name__ == "__main__":
+    print(True)
